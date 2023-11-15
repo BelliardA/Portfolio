@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+
+
+:root{
+    --height : 100vh;
+
+    --gap-left: calc(100vh / 10);
+    --gap-right: calc(100vh / 15);
+    --gap-content: calc(100vh / 9);
+
+    --font-size-lien : 2.4rem;
+    --font-size-h1 : 1.7rem;
+    --font-size-p : 1rem;
+
+    --height-phone : 60%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* -----------------------------------------------------------PAGE ACCUEIL-------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+body{
+	/* font-family: 'Niconne', cursive; */
+    font-family: 'Major Mono Display', monospace;
+    background-color:rgb(236,231,225) ;
+    /* overflow: hidden; */
+    padding: 10px;
+}
+
+#page{
+    display: flex;
+    align-items: center;
+    gap: 10vh;
+    flex-direction: column;
+}
+
+
+/* -----------------------------Nav bar---------------------------------- */
+
+
+#navbar{
+    margin: 10px 15px;
+    width: calc(100vw - 40px);
+    
+
+    font-weight: bold;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#up {
+    display: flex;
+    gap: 30px;
+
+}
+
+#up a{
+    text-decoration: none;
+    color: black;
+}
+
+#separateur-nav{
+    border: 0.1px solid black;
+    height: 30vh;
+    width: 0px;
+    display: none;
+}
+
+/* ----------------------------contenus page accueil -------------------------------- */
+
+#content{
+    width: 91%;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    flex-direction: column-reverse;
+    height: var(--height-phone);
+    gap: 4vh;
+}
+
+
+/* -----------------------------partis gauche de la page--------------------------- */
+
+#left{
+    width: 50vw;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-left);
+    justify-content: center;
+}
+#left a {
+    /* margin: 50px 60px; */
+    text-decoration: none;
+    color: black;
+    font-size: var(--font-size-lien);
+    transition: 0.2s;
+}
+
+#left a:hover{
+    font-style: italic;
+    transform: translateX(4%);
+}
+/* -------------------------separateur---------------------------------------------- */
+
+#separateur-accueil{
+    border: 0.1px solid black;
+    width: 30vw;
+    position: relative;
+    right: 9vw;
+}
+
+
+/* -----------------------------partis droite de la page---------------------------- */
+
+#right{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-right);
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#right h1{
+    font-size: var(--font-size-h1);
+    padding-right: 10vw;
+}
+
+#mini-description-accueil{
+    padding-right: 13vw; 
+}
+
+#mini-description-accueil p{
+    font-size: var(--font-size-p);
+}
+
+
+/* ------------------------------------------------------Tablette min 768px------------------------------------------ */
+
+@media (min-width: 768px){
+    :root{
+        --font-size-lien : 4rem;
+        --font-size-h1 : 2.5rem;
+        --font-size-p : 1.5rem;
+    }
+    body{
+        overflow: visible;
+    }
+    #content{
+        flex-grow: 1;
+    }
+}
+
+/* ------------------------------------------------------PC screen min 1024px------------------------------------------ */
+
+@media (min-width: 1024px){
+    :root{
+        --font-size-lien : 6rem;
+        --font-size-h1 : 2rem;
+        --font-size-p : 1rem;
+    }
+
+    #page{
+        flex-direction: row;
+        gap: 0;
+    }
+
+    #navbar{
+        width: 0px;
+        height: 100%;
+        writing-mode:vertical-rl;
+        transform: rotate(180deg);
+        justify-content: space-around;
+    }
+    #separateur-nav{
+        display: block;
+    }
+
+    #content{
+        flex-direction: row;
+        height: var(--height);
+        gap: var(--gap-content);
+        flex-grow: 1;
+    }
+    #left{
+        flex-grow: 2;
+        gap: var(--gap-left);
+        justify-content: center;
+    }
+    
+    #mini-description-accueil p{
+        padding-right: 0vw; 
+    }
+
+    #separateur-accueil{
+        width: 0vw;
+        height: 30vw;
+        flex-grow: 1;
+        right: 0vw;
+    }
+
+
+    #right{
+        flex-grow: 1;
+        gap: var(--gap-right);
+        justify-content: center;
+        align-items: flex-start;
+        
+    }
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+/* -----------------------------------------------------------PAGE CONTACT-------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
