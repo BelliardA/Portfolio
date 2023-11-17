@@ -1,0 +1,109 @@
+/* ----------------------navbar-------------------------------- */
+
+body{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    overflow: hidden;
+}
+
+#page{
+    height: 100vh;
+}
+
+#up a{
+    color: var(--main-color);
+}
+
+
+#separateur-nav{
+    border: 0.1px solid var(--main-color);
+}
+
+/* ---------------------------------contacte----------------------------- */
+
+#contact{
+    display: flex;
+    height: 100%;
+}
+
+#contact h1{
+    font-size: 7em;
+    writing-mode:vertical-rl;
+    animation-name: slide-left;
+    animation-duration: 1s;
+    
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(-70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    
+}
+
+#info-contact{
+    align-self: center;
+}
+
+#info-contact h2{
+    font-size: 2em;
+    margin-bottom: 60px;
+    transition: 0.2s;
+}
+#info-contact h2:hover{
+    transform: translate3d(10px, -10px, 0px);    
+}   
+#info-contact h2 span{
+    font-size: 1.5em;
+    animation-name: opacity-in;
+    animation-duration: 1s;
+}
+
+@keyframes opacity-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+#info-contact p{
+    margin: 20px 0px;
+}
+
+#info-contact a{
+    text-decoration: inline;
+    color: var(--main-color);   
+}
+
+/* ---------------------------------------tablette screen------------------------ */
+
+@media (min-width: 768px){
+    #contact h1{
+        margin-top: 10vh;
+        font-size: 9em;
+    }
+}
+
+@media (min-width : 1024px) {
+    #page{
+        display: flex;
+    }
+
+    #contact{
+        margin-left: 10vw;
+        gap: 20vw;
+    }
+
+    #contact h1{
+        margin-top: calc(100/10);
+        font-size: calc(100vh/7);
+    }
+}   

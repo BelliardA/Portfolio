@@ -1,31 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-
-
-
-:root{
-    --height : 100vh;
-
-    --gap-left: calc(100vh / 10);
-    --gap-right: calc(100vh / 15);
-    --gap-content: calc(100vh / 9);
-
-    --font-size-lien : 2.4rem;
-    --font-size-h1 : 1.7rem;
-    --font-size-p : 1rem;
-
-    --height-phone : 60%;
-}
-
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 /* -----------------------------------------------------------PAGE ACCUEIL-------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 body{
-	/* font-family: 'Niconne', cursive; */
-    font-family: 'Major Mono Display', monospace;
-    background-color:rgb(236,231,225) ;
-    /* overflow: hidden; */
-    padding: 10px;
+    background-color:var(--main-color) ;
 }
 
 #page{
@@ -37,36 +15,14 @@ body{
 
 
 /* -----------------------------Nav bar---------------------------------- */
-
-
-#navbar{
-    margin: 10px 15px;
-    width: calc(100vw - 40px);
-    
-
-    font-weight: bold;
-
-    display: flex;
-    justify-content: space-between;
-}
-
-#up {
-    display: flex;
-    gap: 30px;
-
-}
-
 #up a{
-    text-decoration: none;
-    color: black;
+    color: var(--second-color);
 }
 
 #separateur-nav{
-    border: 0.1px solid black;
-    height: 30vh;
-    width: 0px;
-    display: none;
+    border: 0.1px solid var(--second-color);
 }
+
 
 /* ----------------------------contenus page accueil -------------------------------- */
 
@@ -94,7 +50,7 @@ body{
 #left a {
     /* margin: 50px 60px; */
     text-decoration: none;
-    color: black;
+    color: var(--second-color);
     font-size: var(--font-size-lien);
     transition: 0.2s;
     animation-duration: 1.5s;
@@ -170,7 +126,7 @@ body{
 /* -------------------------separateur---------------------------------------------- */
 
 #separateur-accueil{
-    border: 0.1px solid black;
+    border: 0.1px solid var(--second-color);
     width: 30vw;
     position: relative;
     right: 9vw;
@@ -259,17 +215,6 @@ body{
         gap: 0;
     }
 
-    #navbar{
-        width: 0px;
-        height: 100%;
-        writing-mode:vertical-rl;
-        transform: rotate(180deg);
-        justify-content: space-around;
-    }
-    #separateur-nav{
-        display: block;
-    }
-
     #content{
         flex-direction: row;
         height: var(--height);
@@ -305,3 +250,4 @@ body{
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 /* -----------------------------------------------------------PAGE CONTACT-------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
+

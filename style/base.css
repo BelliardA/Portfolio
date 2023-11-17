@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+
+
+:root{
+    --height : 100vh;
+
+    --gap-left: calc(100vh / 10);
+    --gap-right: calc(100vh / 15);
+    --gap-content: calc(100vh / 9);
+
+    --font-size-lien : 2.4rem;
+    --font-size-h1 : 1.7rem;
+    --font-size-p : 1rem;
+
+    --height-phone : 60%;
+
+    --main-color : rgb(236,231,225);
+    --second-color : black;
+}
+
+body{
+    padding: 10px;
+    font-family: 'Major Mono Display', monospace;
+}
+
+
+#navbar{
+    margin: 10px 15px;
+    width: calc(100vw - 40px);
+    
+
+    font-weight: bold;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#up {
+    display: flex;
+    gap: 30px;
+
+}
+
+#up a{
+    text-decoration: none;
+}
+
+#separateur-nav{
+    height: 30vh;
+    width: 0px;
+    display: none;
+}
+
+@media (min-width: 1024px){
+    #navbar{
+        width: 0px;
+        height: 100%;
+        writing-mode:vertical-rl;
+        transform: rotate(180deg);
+        justify-content: space-around;
+    }
+    #separateur-nav{
+        display: block;
+    }
+}
